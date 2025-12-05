@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
+:root {
+    --primaria: #BFB7DA;
+    --secundaria: #E6E1F4;
+    --destaque: #7A6FBF;
+    --texto: #4A4A4A;
+    --fundo: #FFFFFF;
+}
+
+/* RESET E GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Merriweather", serif;
+    color: var(--texto);
+    background: var(--fundo);
+    line-height: 1.6;
+}
+
+/* TOPO E LOGO */
+.topo {
+    background: var(--secundaria);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo img {
+    width: 150px;
+}
+
+/* MENU PRINCIPAL */
+.menu-principal {
+    background: var(--destaque);
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 12px 0;
+}
+
+.menu-principal a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Times New Roman", serif;
+}
+
+.menu-principal a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVIDADE MENU */
+@media(max-width: 768px){
+    .menu-principal {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* CONTEÚDO PRINCIPAL */
+.conteudo {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.noticia-principal .destaque {
+    background: var(--secundaria);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 0 10px #00000015;
+    color: var(--texto);
+    text-decoration: none;
+    display: block;
+    transition: 0.25s ease;
+}
+
+.noticia-principal .destaque:hover {
+    transform: translateY(-5px);
+}
+
+.noticia-principal .destaque img {
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 15px;
+}
+
+.noticia-principal .destaque h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.noticia-principal .destaque p {
+    font-size: 15px;
+}
+
+.leia-mais {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--destaque);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.leia-mais:hover {
+    color: #5a51a8;
+    text-decoration: underline;
+}
+
+/* CARDS DE NOTÍCIAS */
+.card-noticia {
+    display: flex;
+    flex-direction: column;
+    background: var(--secundaria);
+    border-radius: 14px;
+    box-shadow: 0 0 8px #00000015;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.card-noticia img {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.card-noticia .conteudo {
+    padding: 15px;
+}
+
+.card-noticia h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-noticia p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.card-noticia .botao {
+    background: var(--destaque);
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.card-noticia .botao:hover {
+    opacity: 0.9;
+}
+
+/* SIDEBAR */
+.sidebar section {
+    background: var(--fundo);
+    border: 4px solid var(--primaria);
+    padding: 14px 18px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+}
+
+.sidebar h3 {
+    margin-bottom: 12px;
+    color: var(--destaque);
+    font-size: 17px;
+}
+
+.sidebar a {
+    color: var(--texto);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.sidebar a:hover {
+    color: var(--destaque);
+    text-decoration: underline;
+}
+
+/* EXTRA SECTION: SOCIAL + NEWSLETTER */
+.extra-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-box,
+.newsletter-box {
+    width: 100%;
+    background: #fff;
+    border: 4px solid var(--primaria);
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.social-box h3,
+.newsletter-box h3 {
+    color: var(--destaque);
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-list li {
+    margin-bottom: 12px;
+}
+
+.social-list a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+}
+
+.icon-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--primaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.icon-circle img {
+    width: 20px;
+    height: 20px;
+}
+
+.social-list a:hover .icon-circle {
+    background: var(--secundaria);
+}
+
+.newsletter-form input,
+.newsletter-form button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.newsletter-form input {
+    border: 1px solid var(--secundaria);
+    margin-bottom: 10px;
+}
+
+.newsletter-form button {
+    background: var(--destaque);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.newsletter-form button:hover {
+    opacity: 0.95;
+}
+
+/* FRASE DO DIA */
+.frase-do-dia {
+    background-color: #f7f7f7;
+    border-left: 4px solid var(--destaque);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.frase-do-dia h3 {
+    margin-bottom: 5px;
+}
+
+/* BOTÃO FIXO DE CONTATO */
+.botao-contato {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--destaque);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.botao-contato img {
+    width: 23px;
+}
+
+.botao-contato:hover {
+    opacity: 0.9;
+}
+
+/* RODAPÉ */
+.rodape {
+    background: var(--primaria);
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 90px;
+}
+
+@media(max-width: 768px){
+    .rodape {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .botao-contato {
+        bottom: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .botao-contato img {
+        width: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .mais-noticias {
+        grid-template-columns: 1fr;
+    }
+}
